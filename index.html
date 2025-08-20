@@ -224,178 +224,192 @@
         }
 
 		// Função para obter a saudação com base no horário atual
-function getSaudacao() {
-    const horaAtual = new Date().getHours();
-    if (horaAtual >= 0 && horaAtual < 4) {
-        return 'acordado essa hora? rs'; // Das 00:00 até 03:59
-    } else if (horaAtual < 12) {
-        return 'bom dia'; // Das 04:00 até 11:59
-    } else if (horaAtual < 18) {
-        return 'boa tarde'; // Das 12:00 até 17:59
-    } else {
-        return 'boa noite'; // Das 18:00 até 23:59
-    }
-}
+        function getSaudacao() {
+            const horaAtual = new Date().getHours();
+            if (horaAtual >= 0 && horaAtual < 4) {
+                return 'acordado essa hora? rs'; // Das 00:00 até 03:59
+            } else if (horaAtual < 12) {
+                return 'bom dia'; // Das 04:00 até 11:59
+            } else if (horaAtual < 18) {
+                return 'boa tarde'; // Das 12:00 até 17:59
+            } else {
+                return 'boa noite'; // Das 18:00 até 23:59
+            }
+        }
 
         // Monitorar o tempo do vídeo e mostrar as mensagens de chat no momento correto
         callVideo.addEventListener('timeupdate', () => {
             const currentTime = callVideo.currentTime;
 			
-if (currentTime >= 03 && !messageShown.message1) {
-    const saudacao = getSaudacao(); // Obtém a saudação dinamicamente
-    showChatMessage('Lucía', `Oi amor, ${saudacao}`, 'left');
-    messageShown.message1 = true;
-}
-if (currentTime >= 07 && !messageShown.message2) {
-    showChatMessage('Lucía', 'Ta aí?? deu certo de você entrar?', 'left');
-    messageShown.message2 = true;
-}
-if (currentTime >= 15 && !messageShown.message3) {
-    showChatMessage('Lucía', 'Perai que já vou ligar a minha câmera, tá?', 'left');
-    messageShown.message3 = true;
-}
-if (currentTime >= 22 && !messageShown.message4) {
-    showChatMessage('Lucía', 'vou pro banheiro, lá fico mais "a vontade" rs 😈', 'left');
-    messageShown.message4 = true;
-}
-if (currentTime >= 30 && !messageShown.message5) {
-    showChatMessage('Lucía', 'Não to sozinha em casa :P', 'left');
-    messageShown.message5 = true;
-}
-if (currentTime >= 500 && !messageShown.message6) {
-    showChatMessage('Lucía', 'Fica bem duro pra mim, bem gostoso', 'left');
-    messageShown.message6 = true;
-}
-if (currentTime >= 500 && !messageShown.message7) {
-    showChatMessage('Lucía', 'Pra eu chupar tudinho tá?', 'left');
-    messageShown.message7 = true;
-}
-if (currentTime >= 37 && !messageShown.message8) {
-    showChatMessage('Lucía', 'To indo pro banheiro, peraaai', 'left');
-    messageShown.message8 = true;
-}
-if (currentTime >= 53 && !messageShown.message9) {
-    showChatMessage('Lucía', 'pronto amor rs 👀', 'left');
-    messageShown.message9 = true;
-}
-if (currentTime >= 58 && !messageShown.message10) {
-    showChatMessage('Lucía', 'vou te mostrar algo especial', 'left');
-    messageShown.message10 = true;
-}
+            if (currentTime >= 03 && !messageShown.message1) {
+                const saudacao = getSaudacao(); 
+                showChatMessage('Lucía', `Oi amor, ${saudacao}`, 'left');
+                messageShown.message1 = true;
+            }
+            if (currentTime >= 07 && !messageShown.message2) {
+                showChatMessage('Lucía', 'Ta aí?? deu certo de você entrar?', 'left');
+                messageShown.message2 = true;
+            }
+            if (currentTime >= 15 && !messageShown.message3) {
+                showChatMessage('Lucía', 'Perai que já vou ligar a minha câmera, tá?', 'left');
+                messageShown.message3 = true;
+            }
+            if (currentTime >= 22 && !messageShown.message4) {
+                showChatMessage('Lucía', 'vou pro banheiro, lá fico mais "a vontade" rs 😈', 'left');
+                messageShown.message4 = true;
+            }
+            if (currentTime >= 30 && !messageShown.message5) {
+                showChatMessage('Lucía', 'Não to sozinha em casa :P', 'left');
+                messageShown.message5 = true;
+            }
+            if (currentTime >= 500 && !messageShown.message6) {
+                showChatMessage('Lucía', 'Fica bem duro pra mim, bem gostoso', 'left');
+                messageShown.message6 = true;
+            }
+            if (currentTime >= 500 && !messageShown.message7) {
+                showChatMessage('Lucía', 'Pra eu chupar tudinho tá?', 'left');
+                messageShown.message7 = true;
+            }
+            if (currentTime >= 37 && !messageShown.message8) {
+                showChatMessage('Lucía', 'To indo pro banheiro, peraaai', 'left');
+                messageShown.message8 = true;
+            }
+            if (currentTime >= 53 && !messageShown.message9) {
+                showChatMessage('Lucía', 'pronto amor rs 👀', 'left');
+                messageShown.message9 = true;
+            }
+            if (currentTime >= 58 && !messageShown.message10) {
+                showChatMessage('Lucía', 'vou te mostrar algo especial', 'left');
+                messageShown.message10 = true;
+            }
 
-// A partir da mensagem 11, aplicando um intervalo de 5 segundos
-if (currentTime >= 95 && !messageShown.message11) {
-    showChatMessage('Lucía', 'Gostou amor?', 'left');
-    messageShown.message11 = true;
-}
-if (currentTime >= 103 && !messageShown.message12) {
-    showChatMessage('Lucía', 'Seu safadooo!', 'left');
-    messageShown.message12 = true;
-}
-if (currentTime >= 109 && !messageShown.message13) {
-    showChatMessage('Lucía', 'quer ver minha bocetinha rosinha?', 'left');
-    messageShown.message13 = true;
-}
-if (currentTime >= 116 && !messageShown.message14) {
-    showChatMessage('Lucía', 'espera ai, já vou ligar a camera de novo', 'left');
-    messageShown.message14 = true;
-}
-if (currentTime >= 121 && !messageShown.message15) {
-    showChatMessage('Lucía', 'vou ficar molhadinha pra você', 'left');
-    messageShown.message15 = true;
-}
-if (currentTime >= 130 && !messageShown.message16) {
-    showChatMessage('Lucía', 'tirando a calcinha...rs 👀', 'left');
-    messageShown.message16 = true;
-}
-if (currentTime >= 140 && !messageShown.message17) {
-    showChatMessage('Lucía', 'prontinhoooo', 'left');
-    messageShown.message17 = true;
-}
-if (currentTime >= 180 && !messageShown.message18) {
-    showChatMessage('Lucía', 'chega kkk', 'left');
-    messageShown.message18 = true;
-}
-if (currentTime >= 186 && !messageShown.message19) {
-    showChatMessage('Lucía', 'é só uma amostrinha, seu safado', 'left');
-    messageShown.message19 = true;
-}
-if (currentTime >= 192 && !messageShown.message20) {
-    showChatMessage('Lucía', 'o que você achou?', 'left');
-    messageShown.message20 = true;
-}
-if (currentTime >= 200 && !messageShown.message21) {
-    showChatMessage('Lucía', 'imagina você me comendo, gostosinho, amor', 'left');
-    messageShown.message21 = true;
-}
-if (currentTime >= 205 && !messageShown.message22) {
-    showChatMessage('Lucía', 'uiui rs', 'left');
-    messageShown.message22 = true;
-}
-if (currentTime >= 213 && !messageShown.message23) {
-    showChatMessage('Lucía', 'vamos combinar uma chamada com mais tempo', 'left');
-    messageShown.message23 = true;
-}
-if (currentTime >= 218 && !messageShown.message24) {
-    showChatMessage('Lucía', 'e vc liga a camera pra mim', 'left');
-    messageShown.message24 = true;
-}
-if (currentTime >= 226 && !messageShown.message25) {
-    showChatMessage('Lucía', 'qro ver seu pau, todo duro pra mim', 'left');
-    messageShown.message25 = true;
-}
-if (currentTime >= 234 && !messageShown.message26) {
-    showChatMessage('Lucía', 'Ai na proxima habilito a função pra eu te ver tbm, tá?', 'left');
-    messageShown.message26 = true;
-}
-if (currentTime >= 240 && !messageShown.message27) {
-    showChatMessage('Lucía', 'me manda dps la no zap qnd vc pode?', 'left');
-    messageShown.message27 = true;
-}
-if (currentTime >= 246 && !messageShown.message28) {
-    showChatMessage('Lucía', 'na proxima vou gozar bem gostoso pra voce 😏😈', 'left');
-    messageShown.message28 = true;
-}
-if (currentTime >= 252 && !messageShown.message29) {
-    showChatMessage('Lucía', 'vou ter que desligar amor', 'left');
-    messageShown.message29 = true;
-}
-if (currentTime >= 258 && !messageShown.message30) {
-    showChatMessage('Lucía', 'me chama no whats taa ❤️', 'left');
-    messageShown.message30 = true;
-}
-if (currentTime >= 611 && !messageShown.message31) {
-    showChatMessage('Lucía', 'voltando vou gozar bem gostoso pra voce 😏😈', 'left');
-    messageShown.message31 = true;
-}
-if (currentTime >= 616 && !messageShown.message32) {
-    showChatMessage('Lucía', 'Vou adorar ver seu pau bem duro pra mim, sabia?', 'left');
-    messageShown.message32 = true;
-}
-if (currentTime >= 621 && !messageShown.message33) {
-    showChatMessage('Lucía', 'vou rebolar bem gostoso pra vc, pra vc me ver quicando', 'left');
-    messageShown.message33 = true;
-}
-if (currentTime >= 626 && !messageShown.message34) {
-    showChatMessage('Lucía', 'vou precisar ir aqui amor, me chama no zap', 'left');
-    messageShown.message34 = true;
-}
-if (currentTime >= 631 && !messageShown.message35) {
-    showChatMessage('Lucía', 'Vou indo, nos vemos em breve, tá? ❤️', 'left');
-    messageShown.message35 = true;
-}
+            // A partir da mensagem 11
+            if (currentTime >= 95 && !messageShown.message11) {
+                showChatMessage('Lucía', 'Gostou amor?', 'left');
+                messageShown.message11 = true;
+            }
+            if (currentTime >= 103 && !messageShown.message12) {
+                showChatMessage('Lucía', 'Seu safadooo!', 'left');
+                messageShown.message12 = true;
+            }
+            if (currentTime >= 109 && !messageShown.message13) {
+                showChatMessage('Lucía', 'quer ver minha bocetinha rosinha?', 'left');
+                messageShown.message13 = true;
+            }
+            if (currentTime >= 116 && !messageShown.message14) {
+                showChatMessage('Lucía', 'espera ai, já vou ligar a camera de novo', 'left');
+                messageShown.message14 = true;
+            }
+            if (currentTime >= 121 && !messageShown.message15) {
+                showChatMessage('Lucía', 'vou ficar molhadinha pra você', 'left');
+                messageShown.message15 = true;
+            }
+            if (currentTime >= 130 && !messageShown.message16) {
+                showChatMessage('Lucía', 'tirando a calcinha...rs 👀', 'left');
+                messageShown.message16 = true;
+            }
+            if (currentTime >= 140 && !messageShown.message17) {
+                showChatMessage('Lucía', 'prontinhoooo', 'left');
+                messageShown.message17 = true;
+            }
+            if (currentTime >= 180 && !messageShown.message18) {
+                showChatMessage('Lucía', 'chega kkk', 'left');
+                messageShown.message18 = true;
+            }
+            if (currentTime >= 186 && !messageShown.message19) {
+                showChatMessage('Lucía', 'é só uma amostrinha, seu safado', 'left');
+                messageShown.message19 = true;
+            }
+            if (currentTime >= 192 && !messageShown.message20) {
+                showChatMessage('Lucía', 'o que você achou?', 'left');
+                messageShown.message20 = true;
+            }
+            if (currentTime >= 200 && !messageShown.message21) {
+                showChatMessage('Lucía', 'imagina você me comendo, gostosinho, amor', 'left');
+                messageShown.message21 = true;
+            }
+            if (currentTime >= 205 && !messageShown.message22) {
+                showChatMessage('Lucía', 'uiui rs', 'left');
+                messageShown.message22 = true;
+            }
+            if (currentTime >= 213 && !messageShown.message23) {
+                showChatMessage('Lucía', 'vamos combinar uma chamada com mais tempo', 'left');
+                messageShown.message23 = true;
+            }
+            if (currentTime >= 218 && !messageShown.message24) {
+                showChatMessage('Lucía', 'e vc liga a camera pra mim', 'left');
+                messageShown.message24 = true;
+            }
+            if (currentTime >= 226 && !messageShown.message25) {
+                showChatMessage('Lucía', 'qro ver seu pau, todo duro pra mim', 'left');
+                messageShown.message25 = true;
+            }
+            if (currentTime >= 234 && !messageShown.message26) {
+                showChatMessage('Lucía', 'Ai na proxima habilito a função pra eu te ver tbm, tá?', 'left');
+                messageShown.message26 = true;
+            }
+            if (currentTime >= 240 && !messageShown.message27) {
+                showChatMessage('Lucía', 'me manda dps la no zap qnd vc pode?', 'left');
+                messageShown.message27 = true;
+            }
+            if (currentTime >= 246 && !messageShown.message28) {
+                showChatMessage('Lucía', 'na proxima vou gozar bem gostoso pra voce 😏😈', 'left');
+                messageShown.message28 = true;
+            }
+            if (currentTime >= 252 && !messageShown.message29) {
+                showChatMessage('Lucía', 'vou ter que desligar amor', 'left');
+                messageShown.message29 = true;
+            }
+            if (currentTime >= 258 && !messageShown.message30) {
+                showChatMessage('Lucía', 'me chama no whats taa ❤️', 'left');
+                messageShown.message30 = true;
+            }
+            if (currentTime >= 611 && !messageShown.message31) {
+                showChatMessage('Lucía', 'voltando vou gozar bem gostoso pra voce 😏😈', 'left');
+                messageShown.message31 = true;
+            }
+            if (currentTime >= 616 && !messageShown.message32) {
+                showChatMessage('Lucía', 'Vou adorar ver seu pau bem duro pra mim, sabia?', 'left');
+                messageShown.message32 = true;
+            }
+            if (currentTime >= 621 && !messageShown.message33) {
+                showChatMessage('Lucía', 'vou rebolar bem gostoso pra vc, pra vc me ver quicando', 'left');
+                messageShown.message33 = true;
+            }
+            if (currentTime >= 626 && !messageShown.message34) {
+                showChatMessage('Lucía', 'vou precisar ir aqui amor, me chama no zap', 'left');
+                messageShown.message34 = true;
+            }
+            if (currentTime >= 631 && !messageShown.message35) {
+                showChatMessage('Lucía', 'Vou indo, nos vemos em breve, tá? ❤️', 'left');
+                messageShown.message35 = true;
+            }
+        });
 
-// Certifique-se de fechar o evento 'timeupdate' corretamente
-});
+        // Redireciona para uma página específica ao término do vídeo
+        callVideo.addEventListener('ended', () => {
+            window.location.href = "https://meuprivadinho-salaprivada.vercel.app/";
+            localStorage.removeItem("videoTime");
+            localStorage.removeItem("messagesShown");
+        });
 
-// Redireciona para uma página específica ao término do vídeo
-callVideo.addEventListener('ended', () => {
-    window.location.href = "https://meuprivadinho-salaprivada.vercel.app/";
-});
-</script>
+        // ===== NOVA FUNÇÃO: SALVAR E RECUPERAR TEMPO E ESTADO DO CHAT =====
+        window.addEventListener("beforeunload", () => {
+            localStorage.setItem("videoTime", callVideo.currentTime);
+            localStorage.setItem("messagesShown", JSON.stringify(messageShown));
+        });
 
+        window.addEventListener("load", () => {
+            const savedTime = localStorage.getItem("videoTime");
+            const savedMessages = localStorage.getItem("messagesShown");
 
-
-
+            if (savedTime) {
+                callVideo.currentTime = parseFloat(savedTime);
+            }
+            if (savedMessages) {
+                messageShown = JSON.parse(savedMessages);
+            }
+        });
+    </script>
 
 </body></html>
